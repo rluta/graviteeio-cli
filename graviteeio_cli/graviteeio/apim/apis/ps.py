@@ -22,53 +22,31 @@ def ps(obj, format, query):
     """
 This command displays the list of APIs
 
+\b
 API Field:
-
 - `id`: string 
-
 - `name`: string
-
 - `version`: string
-
 - `description`: string
-
 - `visibility`: enum `public`, `private``
-
 - `state`: enum `initialized`, `stopped`, `started`, `closed`
-
 - `labels`: string array
-
 - `manageable`: boolean
-
 - `numberOfRatings`: num
-
 - `tags:string array
-
 - `created_at`: unix time
-
 - `updated_at:` unix time
-
 - `owner`:
-
     - `id`: string
-
     - `displayName`: string
-
 - `picture_url`: string url
-
 - `virtual_hosts`: array
     - `host`: string
-
     - `path`: string
-
     - `overrideEntrypoint`: boolean
-
 - `lifecycle_state`: enum `created`, `published`, unpublished`, `deprecated`, archived`
-
 - `workflow_state`: enum `draft`, ìn_review`, `request_for_changes`, `review_ok`
-
 - `is_synchronized`: boolean
-    
     """
 
     resp = 'test'
@@ -136,5 +114,3 @@ API Field:
             gio.echo(apis_filtered, outputFormat, header)
         except Exception as err:
             raise GraviteeioError(err.msg)
-
-        
